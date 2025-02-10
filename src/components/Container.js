@@ -6,7 +6,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/quiz")
+    fetch("https://api-backend-git-main-toriqs-projects-6abf52de.vercel.app/quiz")
       .then((response) => response.json())
       .then((data) => {
         const parsedData = data.map((question) => ({
