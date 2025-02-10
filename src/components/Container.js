@@ -103,7 +103,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
                 <h1 className="question__count">Question - {count + 1}</h1>
                 <hr className="hr-line" />
                 <img
-                  src={`http://localhost:3006/${currentQuestion.image}`}
+                  src={`https://admin-panel-teal-nine.vercel.app/${currentQuestion.image}`}
                   alt="question"
                   className="question__image"
                 />
