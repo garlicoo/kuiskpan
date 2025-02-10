@@ -16,7 +16,6 @@ const Container = ({ name, handleScore, handleLimit }) => {
         const limitQuestion = shuffleArray(parsedData).slice(0, 10);
         setData(limitQuestion);
         handleLimit(limitQuestion.length);
-        console.log(limitQuestion);
       });
   }, []);
 
