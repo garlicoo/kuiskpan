@@ -135,7 +135,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
               <iframe
                 width="560"
                 height="315"
-                src={`http://localhost:3006/${currentQuestion.video}`}
+                src={`https://admin-panel-teal-nine.vercel.app/${currentQuestion.video}`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
