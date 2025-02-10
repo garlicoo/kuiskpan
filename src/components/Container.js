@@ -13,7 +13,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
           ...question,
           options: JSON.parse(question.options),
         }));
-        const limitQuestion = shuffleArray(parsedData).slice(0, 10);
+        const limitQuestion = shuffleArray(parsedData).slice(0, 1);
         setData(limitQuestion);
         handleLimit(limitQuestion.length);
         console.log(limitQuestion);
