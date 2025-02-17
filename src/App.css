@@ -17,7 +17,7 @@
   max-width: 900px;
   width: 90%;
   padding: 10px 5px;
-  background-color: #FFFFFF;
+  background-color: transparent;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   
@@ -38,7 +38,7 @@
 }
 
 .start-button {
-  background-color: #FFFFFF;
+  background-color: #000080;
   color: white;
   border: none;
   border-radius: 10px;
@@ -50,7 +50,7 @@
 }
 
 .next-button {
-  background-color: #ffffff;
+  background-color: #000080;
   color: white;
   border: none;
   border-radius: 10px;
@@ -140,7 +140,7 @@
   margin-bottom: 15px;
 }
 .question {
-  color: #ffffff;
+  color: #000080;
   line-height: 1.4;
   font-size: 14px;
   margin-top: 30px;
