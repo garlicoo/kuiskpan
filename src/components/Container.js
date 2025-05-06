@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Option from "./Option";
 
-const Container = ({ name, handleScore, handleLimit }) => {
+const Container = ({ name, nip, handleScore, handleLimit }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
       setSelected(false);
     } else {
       setShowResult(true);
-      navigate("/result", { state: { name } });
+      navigate("/result", { state: { name, nip } });
     }
   };
 
@@ -102,7 +102,7 @@ const Container = ({ name, handleScore, handleLimit }) => {
                 <h1 className="question__count">Question - {count + 1}</h1>
                 <hr className="hr-line" />
                 <img
-                  src={`https://admin-panel-teal-nine.vercel.app/${currentQuestion.image}`}
+                  src={`https://drive.google.com/thumbnail?id=${currentQuestion.image}`}
                   alt="question"
                   className="question__image"
                 />
@@ -132,9 +132,9 @@ const Container = ({ name, handleScore, handleLimit }) => {
             <div className="video-container">
               <h2 className="titleVideo">Jawaban Soal Nomor {count + 1}</h2>
               <iframe
-                width="560"
+                width="512"
                 height="315"
-                src={`https://admin-panel-teal-nine.vercel.app/${currentQuestion.video}`}
+                src={`https://drive.google.com/file/d/${currentQuestion.video}/preview`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
