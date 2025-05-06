@@ -9,6 +9,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [limit, setLimit] = useState(0);
   const [name, setName] = useState('');
+  const [nip, setNip] = useState('');
 
   const handleScore = () => {
     setScore(score + 1);
@@ -26,14 +27,14 @@ function App() {
     <div className='main'>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home setName={setName} />}/>
+          <Route path="/" element={<Home setName={setName} setNip={setNip} />}/>
           <Route 
             path="/quiz" 
-            element={<Container name={name} handleScore={handleScore} handleLimit={handleLimit}/>} 
+            element={<Container name={name} nip={nip} handleScore={handleScore} handleLimit={handleLimit}/>} 
           />
           <Route 
             path="/result" 
-            element={<Result name={name} score={score} resetScore={resetScore} limit={limit}/>} 
+            element={<Result name={name} nip={nip} score={score} resetScore={resetScore} limit={limit}/>} 
           />
         </Routes>
       </BrowserRouter>
