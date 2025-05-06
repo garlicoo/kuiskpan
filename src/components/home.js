@@ -3,14 +3,20 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
 
-const Home = ({ setName }) => {
+const Home = ({ setName, setNip }) => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
-  const handleNameSubmit = (name) => {
+  const handleSubmit = (name, nip) => {
+    if (!name || !nip) {
+        alert("Mohon isi Nama dan NIP!");
+        return;
+    }
     setName(name);
+    setNip(nip);
     navigate("/quiz");
-  };
+};
+
 
   return (
     <div className="home">
@@ -24,7 +30,7 @@ const Home = ({ setName }) => {
       <Modal
         showModal={showModal}
         setShowModal={setShowModal}
-        handleNameSubmit={handleNameSubmit}
+        handleSubmit={handleSubmit}
       />
     </div>
   );
