@@ -9,7 +9,7 @@ const Result = ({ name, nip, score, resetScore, limit }) => {
     if (!saved) {
       const saveResult = async () => {
         try {
-          const response = await fetch('http://localhost:5000/results', {
+          const response = await fetch('api-backend-beige.vercel.app/results', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
